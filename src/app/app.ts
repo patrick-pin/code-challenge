@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [RegistrationFormComponent],
+  template: `<app-registration-form />`
 })
-export class App {
-  protected readonly title = signal('code-challenge');
-}
+export class AppComponent {}
